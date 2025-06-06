@@ -51,9 +51,9 @@ If the task fails, a `local_roadrunner\exception\task_execution_failed` will be 
 
 ## When to use `simple_runner` vs `safe_runner`
 
-| Use Case                          | `simple_runner` | `safe_runner` |
+| Use Case                         | `simple_runner`  | `safe_runner` |
 |----------------------------------|------------------|---------------|
-| REST endpoints or Web services   | ✅               | ⚠️ risky      |
+| REST endpoints or Web services   | ⚠️ risky          | ✅            |
 | Admin tools / debug interfaces   | ✅               | ✅            |
 | Respect Moodle cron behavior     | ❌               | ✅            |
 | Avoid task locking conflicts     | ❌               | ✅            |
