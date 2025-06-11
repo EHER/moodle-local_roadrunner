@@ -78,6 +78,7 @@ $CFG->mtrace_wrapper = 'quiet_trace';
 
 ## Roadmap
 
+- [ ] Have something compatible with Moodle to test it
 - [ ] Support for `adhoc_task` execution
 
 ---
