@@ -60,6 +60,22 @@ If the task fails, a `local_roadrunner\exception\task_execution_failed` will be 
 
 ---
 
+### Safer alternative to `mtrace()`
+
+If you're using `simple_runner` (e.g. in REST or AJAX contexts), consider replacing `mtrace()` with a custom logging function that avoids flushing output.
+
+You can configure a global wrapper for `mtrace()` by adding this to your `config.php`:
+
+```php
+function quiet_trace($message, $eol = "\n") {
+    error_log('[mtrace] ' . $message);
+}
+
+$CFG->mtrace_wrapper = 'quiet_trace';
+```
+
+---
+
 ## Roadmap
 
 - [ ] Support for `adhoc_task` execution
